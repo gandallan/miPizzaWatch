@@ -1,27 +1,135 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Tamaño-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MiPizzaWatch_WatchKit_App" customModuleProvider="target">
+                <controller title="Tamaño" id="AgC-eL-Hgc" customClass="tamanoInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
                     <items>
-                        <label width="136" alignment="left" text="Mi pizza favorita" textAlignment="center" id="K6O-W9-ZC2"/>
+                        <label width="136" alignment="left" text="Tamaño de tu pizza" minimumScaleFactor="0.90000000000000002" id="BMn-Oj-HQF"/>
+                        <picker height="59" alignment="center" focusStyle="sequence" id="mha-Gm-1KT">
+                            <accessibilityTraits key="accessibilityTraits" selected="YES" keyboardKey="YES" updatesFrequently="YES" adjustable="YES"/>
+                            <connections>
+                                <action selector="pickerChanged:" destination="AgC-eL-Hgc" id="VBl-KJ-3Pl"/>
+                            </connections>
+                        </picker>
+                        <label width="136" height="32.5" alignment="left" text="Label" textAlignment="center" id="hjI-pW-iD2">
+                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                        </label>
+                        <button width="136" height="36.5" alignment="left" title="Siguiente" id="l8r-6Y-7ag">
+                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="d9x-Zd-2XS" kind="push" id="YWi-WK-Dnm"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="itemLabel" destination="hjI-pW-iD2" id="QRe-fC-eLw"/>
+                        <outlet property="siguienteButton" destination="l8r-6Y-7ag" id="t0K-QR-ea0"/>
+                        <outlet property="tamanosPicker" destination="mha-Gm-1KT" id="RK6-F2-bcd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="331.25"/>
+        </scene>
+        <!--Masa-->
+        <scene sceneID="faz-K3-yZ4">
+            <objects>
+                <controller title="Masa" id="d9x-Zd-2XS" customClass="TipoInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="24.5" alignment="left" text="Tipo de masa" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="hsI-RZ-fhp">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <picker height="59" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="n8l-ue-fD4">
+                            <connections>
+                                <action selector="pickerChange:" destination="d9x-Zd-2XS" id="PiO-ZV-EFG"/>
+                            </connections>
+                        </picker>
+                        <label width="135.5" height="30.5" alignment="left" text="Label" textAlignment="center" id="67W-xi-8KA">
+                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                        </label>
+                        <button width="1" alignment="left" title="Siguiente" id="Tdr-uH-FNC">
+                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="qSA-50-ZQL" kind="push" id="1nB-3J-ytD"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="itemLabel" destination="67W-xi-8KA" id="o20-J7-bmG"/>
+                        <outlet property="siguienteButton" destination="Tdr-uH-FNC" id="i1F-PU-CQI"/>
+                        <outlet property="tamanoPizza" destination="n8l-ue-fD4" id="RtJ-oO-aUn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="407" y="333.25"/>
+        </scene>
+        <!--Queso-->
+        <scene sceneID="nsl-sN-IEy">
+            <objects>
+                <controller title="Queso" id="qSA-50-ZQL" customClass="QuesoInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" text="Tipo de queso" textAlignment="center" minimumScaleFactor="0.90000000000000002" id="x5D-Fd-SS9"/>
+                        <picker height="59" alignment="left" focusStyle="sequence" indicatorMode="shownWhileFocused" id="pNB-gm-re1">
+                            <connections>
+                                <action selector="pickerAction:" destination="qSA-50-ZQL" id="i4T-od-7TJ"/>
+                            </connections>
+                        </picker>
+                        <label width="136" height="35" alignment="left" text="Label" textAlignment="center" id="wNj-rn-736">
+                            <fontDescription key="font" type="boldSystem" pointSize="20"/>
+                        </label>
+                        <button width="1" alignment="left" title="Siguiente" id="OEf-ra-iNY">
+                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="siguienteAction" destination="qSA-50-ZQL" id="qyG-J0-jba"/>
+                                <segue destination="SOa-6W-OxO" kind="push" id="vbn-Yn-rc1"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="itemLabel" destination="wNj-rn-736" id="sxa-Xr-7Yv"/>
+                        <outlet property="quesoPicker" destination="pNB-gm-re1" id="shc-Po-rVf"/>
+                        <outlet property="siguienteButton" destination="OEf-ra-iNY" id="Wr4-vW-Hqc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="610" y="333"/>
+        </scene>
+        <!--Ingredientes-->
+        <scene sceneID="WBC-Cf-XSY">
+            <objects>
+                <controller title="Ingredientes" id="SOa-6W-OxO">
+                    <items>
+                        <switch width="1" alignment="left" title="Jamón" id="bL0-6k-Acu"/>
+                        <switch width="1" alignment="left" title="Pepperoni" id="Sws-v6-Thc"/>
+                        <switch width="1" alignment="left" title="Pavo" id="Vlm-xa-YFp"/>
+                        <switch width="1" alignment="left" title="Salchicha" id="rbj-SW-or8"/>
+                        <switch width="1" alignment="left" title="Aceituna" id="l2c-Gz-bKG"/>
+                        <switch width="1" alignment="left" title="Cebolla" id="Q9R-Pi-gvM"/>
+                        <switch width="1" alignment="left" title="Pimiento" id="Hu4-2L-1gu"/>
+                        <switch width="1" alignment="left" title="Piña" id="kCK-l6-660"/>
+                        <switch width="1" alignment="left" title="Anchoas" id="EdA-Zl-vLB"/>
+                        <button width="1" alignment="left" title="Siguiente" id="ahM-p3-bRB">
+                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="7Qz-fH-ZYI" kind="push" id="keK-A6-L8w"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="816" y="457"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="faz-K3-yZ4">
+        <!--Tu orden-->
+        <scene sceneID="cb2-Jt-4mM">
             <objects>
-                <controller id="d9x-Zd-2XS"/>
+                <controller title="Tu orden" id="7Qz-fH-ZYI"/>
             </objects>
-            <point key="canvasLocation" x="398" y="345"/>
+            <point key="canvasLocation" x="1052" y="327"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

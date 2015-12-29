@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813B859B1C327EE400589E65 /* QuesoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B859A1C327EE400589E65 /* QuesoInterfaceController.swift */; };
 		81734D8D1C15259800C049CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734D8C1C15259800C049CC /* AppDelegate.swift */; };
 		81734D8F1C15259800C049CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734D8E1C15259800C049CC /* ViewController.swift */; };
 		81734D921C15259800C049CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81734D901C15259800C049CC /* Main.storyboard */; };
@@ -16,10 +17,11 @@
 		81734DA21C15259800C049CC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81734DA01C15259800C049CC /* Interface.storyboard */; };
 		81734DA41C15259800C049CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81734DA31C15259800C049CC /* Assets.xcassets */; };
 		81734DAB1C15259800C049CC /* MiPizzaWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 81734DAA1C15259800C049CC /* MiPizzaWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		81734DB21C15259800C049CC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734DB11C15259800C049CC /* InterfaceController.swift */; };
+		81734DB21C15259800C049CC /* TamanoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734DB11C15259800C049CC /* TamanoInterfaceController.swift */; };
 		81734DB41C15259800C049CC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734DB31C15259800C049CC /* ExtensionDelegate.swift */; };
 		81734DB61C15259800C049CC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734DB51C15259800C049CC /* NotificationController.swift */; };
 		81734DB81C15259800C049CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81734DB71C15259800C049CC /* Assets.xcassets */; };
+		81734DCA1C1557B000C049CC /* TipoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81734DC91C1557B000C049CC /* TipoInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		813B859A1C327EE400589E65 /* QuesoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoInterfaceController.swift; sourceTree = "<group>"; };
 		81734D891C15259800C049CC /* MiPizzaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiPizzaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81734D8C1C15259800C049CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81734D8E1C15259800C049CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,11 +81,12 @@
 		81734DA51C15259800C049CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81734DAA1C15259800C049CC /* MiPizzaWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MiPizzaWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81734DB01C15259800C049CC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		81734DB11C15259800C049CC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		81734DB11C15259800C049CC /* TamanoInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamanoInterfaceController.swift; sourceTree = "<group>"; };
 		81734DB31C15259800C049CC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		81734DB51C15259800C049CC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		81734DB71C15259800C049CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81734DB91C15259800C049CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81734DC91C1557B000C049CC /* TipoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +153,9 @@
 		81734DAE1C15259800C049CC /* MiPizzaWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				81734DB11C15259800C049CC /* InterfaceController.swift */,
+				81734DB11C15259800C049CC /* TamanoInterfaceController.swift */,
+				81734DC91C1557B000C049CC /* TipoInterfaceController.swift */,
+				813B859A1C327EE400589E65 /* QuesoInterfaceController.swift */,
 				81734DB31C15259800C049CC /* ExtensionDelegate.swift */,
 				81734DB51C15259800C049CC /* NotificationController.swift */,
 				81734DB71C15259800C049CC /* Assets.xcassets */,
@@ -311,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813B859B1C327EE400589E65 /* QuesoInterfaceController.swift in Sources */,
 				81734DB61C15259800C049CC /* NotificationController.swift in Sources */,
+				81734DCA1C1557B000C049CC /* TipoInterfaceController.swift in Sources */,
 				81734DB41C15259800C049CC /* ExtensionDelegate.swift in Sources */,
-				81734DB21C15259800C049CC /* InterfaceController.swift in Sources */,
+				81734DB21C15259800C049CC /* TamanoInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +552,7 @@
 				81734DBE1C15259800C049CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81734DC01C15259800C049CC /* Build configuration list for PBXNativeTarget "MiPizzaWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +561,7 @@
 				81734DC21C15259800C049CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81734DC41C15259800C049CC /* Build configuration list for PBXNativeTarget "MiPizzaWatch" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +570,7 @@
 				81734DC61C15259800C049CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
