@@ -35,7 +35,12 @@ class tamanoInterfaceController: WKInterfaceController {
     @IBAction func pickerChanged(value: Int) {
         
         itemLabel.setText(listItems[value].1)
+
         siguienteButton.setEnabled(true)
+        
+        
+        //var c = context as! ResultadoDeLaOrden
+        
         
     }
     
@@ -49,11 +54,18 @@ class tamanoInterfaceController: WKInterfaceController {
             let pickerItem = WKPickerItem()
             pickerItem.caption = $0.0
             pickerItem.title = $0.1
+            
             return pickerItem
+        
         }
+        
+      
         
         tamanosPicker.setItems(pickerItems)
         
+        //let valorContexto = ResultadoDeLaOrden(Tamano: String())
+        
+
      
         // Configure interface objects here.
     }

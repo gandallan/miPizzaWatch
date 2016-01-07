@@ -102,34 +102,114 @@
         <!--Ingredientes-->
         <scene sceneID="WBC-Cf-XSY">
             <objects>
-                <controller title="Ingredientes" id="SOa-6W-OxO">
+                <controller title="Ingredientes" id="SOa-6W-OxO" customClass="IngredientesInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
                     <items>
-                        <switch width="1" alignment="left" title="Jamón" id="bL0-6k-Acu"/>
-                        <switch width="1" alignment="left" title="Pepperoni" id="Sws-v6-Thc"/>
-                        <switch width="1" alignment="left" title="Pavo" id="Vlm-xa-YFp"/>
-                        <switch width="1" alignment="left" title="Salchicha" id="rbj-SW-or8"/>
-                        <switch width="1" alignment="left" title="Aceituna" id="l2c-Gz-bKG"/>
-                        <switch width="1" alignment="left" title="Cebolla" id="Q9R-Pi-gvM"/>
-                        <switch width="1" alignment="left" title="Pimiento" id="Hu4-2L-1gu"/>
-                        <switch width="1" alignment="left" title="Piña" id="kCK-l6-660"/>
-                        <switch width="1" alignment="left" title="Anchoas" id="EdA-Zl-vLB"/>
+                        <label width="136" height="38.5" alignment="left" text="Selecciona 5 ingredientes" textAlignment="center" numberOfLines="2" id="qJv-gF-6Xe">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <switch width="1" alignment="left" title="Jamón" id="bL0-6k-Acu">
+                            <connections>
+                                <action selector="jamonButton:" destination="SOa-6W-OxO" id="yDl-X6-cHA"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pepperoni" id="Sws-v6-Thc">
+                            <connections>
+                                <action selector="pepperoniButton:" destination="SOa-6W-OxO" id="ZSX-me-ZBC"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pavo" id="Vlm-xa-YFp">
+                            <connections>
+                                <action selector="pavoButton:" destination="SOa-6W-OxO" id="hwK-d3-fjB"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Salchicha" id="rbj-SW-or8">
+                            <connections>
+                                <action selector="salchichaButton:" destination="SOa-6W-OxO" id="q5n-Ld-75c"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Aceituna" id="l2c-Gz-bKG">
+                            <connections>
+                                <action selector="aceitunaButton:" destination="SOa-6W-OxO" id="C3E-UQ-bhE"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Cebolla" id="Q9R-Pi-gvM">
+                            <connections>
+                                <action selector="cebollaButton:" destination="SOa-6W-OxO" id="VY6-r4-KkB"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Pimiento" id="Hu4-2L-1gu">
+                            <connections>
+                                <action selector="pimientoButton:" destination="SOa-6W-OxO" id="6SS-q3-w7E"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Piña" id="kCK-l6-660">
+                            <connections>
+                                <action selector="pinaButton:" destination="SOa-6W-OxO" id="kL5-Nk-zuL"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Anchoas" id="EdA-Zl-vLB">
+                            <connections>
+                                <action selector="anchoasButton:" destination="SOa-6W-OxO" id="pkU-qj-j5G"/>
+                            </connections>
+                        </switch>
                         <button width="1" alignment="left" title="Siguiente" id="ahM-p3-bRB">
                             <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="7Qz-fH-ZYI" kind="push" id="keK-A6-L8w"/>
+                                <segue destination="7Qz-fH-ZYI" kind="push" id="oxH-Gd-bIT"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="siguienteButton" destination="ahM-p3-bRB" id="luR-fo-kIf"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="816" y="457"/>
+            <point key="canvasLocation" x="816" y="478.25"/>
         </scene>
         <!--Tu orden-->
         <scene sceneID="cb2-Jt-4mM">
             <objects>
-                <controller title="Tu orden" id="7Qz-fH-ZYI"/>
+                <controller title="Tu orden" id="7Qz-fH-ZYI" customClass="TuOrdenInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
+                    <items>
+                        <label width="136" height="28.5" alignment="left" text="Tu orden" textAlignment="center" numberOfLines="2" id="Tcp-qu-cGh">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <separator alignment="left" id="q3U-KU-aUY"/>
+                        <label width="136" height="21.5" alignment="left" text="Tamaño:" textAlignment="center" numberOfLines="2" id="cxh-Lv-VPN">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="label" textAlignment="center" numberOfLines="2" id="Ahr-Rc-bH8">
+                            <color key="textColor" red="1" green="0.76734059480000005" blue="0.24792966520000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="Masa:" textAlignment="center" numberOfLines="2" id="Aaq-NX-MeN">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="label" textAlignment="center" numberOfLines="2" id="9Sj-Ta-Bzo">
+                            <color key="textColor" red="1" green="0.76734059480000005" blue="0.24792966520000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="Queso:" textAlignment="center" numberOfLines="2" id="Cs2-Rf-TVe">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="label" textAlignment="center" numberOfLines="2" id="TA5-ke-VAl">
+                            <color key="textColor" red="1" green="0.76734059480000005" blue="0.24792966520000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="Ingredientes:" textAlignment="center" numberOfLines="2" id="BCT-e3-L1Q">
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <label width="136" height="21.5" alignment="left" text="label" textAlignment="center" numberOfLines="2" id="iu5-YF-0ok">
+                            <color key="textColor" red="1" green="0.76734059480000005" blue="0.24792966520000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="18"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="TamanoResultado" destination="Ahr-Rc-bH8" id="k2N-ln-rrV"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="1052" y="327"/>
+            <point key="canvasLocation" x="1055" y="370.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
