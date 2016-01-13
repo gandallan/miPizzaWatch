@@ -10,10 +10,22 @@ import WatchKit
 import Foundation
 
 
- var tamanoSeleccionado:String!
+//**************** Variable global
+
+var tamanoSeleccionado:String!
+
+//****************
+
+
+
 
 class tamanoInterfaceController: WKInterfaceController {
 
+    
+    
+    
+//**************** Outlets
+    
     @IBOutlet var tamanosPicker: WKInterfacePicker!
     
     @IBOutlet var itemLabel: WKInterfaceLabel!
@@ -22,9 +34,8 @@ class tamanoInterfaceController: WKInterfaceController {
     
     
     
-    
 
-//******************** Variables
+//******************** Variable (lista de String para el Picker)
     
     var listItems: [(String, String)] = [
         
@@ -34,30 +45,25 @@ class tamanoInterfaceController: WKInterfaceController {
     
     ]
     
-   
     
+    
+    
+//******************** al precionar el Picker List(Button)
     @IBAction func pickerChanged(value: Int) {
-        
         
         itemLabel.setText(listItems[value].1)
 
         siguienteButton.setEnabled(true)
         
         tamanoSeleccionado = "\(self.listItems[value].1)"
-       
-        
-        //var c = context as! ResultadoDeLaOrden
         
         
     }
     
 
-    
-    
-    
-    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+//********************Seleccion del caption y el title de la lista
         
         let pickerItems: [WKPickerItem] = listItems.map {
             let pickerItem = WKPickerItem()
@@ -68,18 +74,15 @@ class tamanoInterfaceController: WKInterfaceController {
         
         }
         
-      
-        
         tamanosPicker.setItems(pickerItems)
-        
-        //let valorContexto = ResultadoDeLaOrden(Tamano: String())
-        
 
-     
-        // Configure interface objects here.
     }
     
+
     
+    
+    
+/*
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -95,26 +98,5 @@ class tamanoInterfaceController: WKInterfaceController {
        
         
     }
-
-    
-/*
-    func elegirTamano(){
-        
-        let tamanoChico:WKPickerItem = WKPickerItem()
-        tamanoChico.title = "Chico"
-        print(tamanoChico.title!)
-        
-        let tamanoMediano:WKPickerItem = WKPickerItem()
-        tamanoMediano.title = "Mediano"
-        print(tamanoMediano.title!)
-        
-        
-        
-        tamanosPicker.setItems([tamanoChico, tamanoMediano])
-
-        
-    }
 */
-    
-
 }

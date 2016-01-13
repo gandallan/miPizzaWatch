@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81386FEC1C3E56260070B7A5 /* ResultadoDeLaOrden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81386FEB1C3E56260070B7A5 /* ResultadoDeLaOrden.swift */; };
 		81386FEE1C3E57430070B7A5 /* TuOrdenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81386FED1C3E57430070B7A5 /* TuOrdenInterfaceController.swift */; };
 		813B859B1C327EE400589E65 /* QuesoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B859A1C327EE400589E65 /* QuesoInterfaceController.swift */; };
 		813B859D1C33ABDB00589E65 /* IngredientesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813B859C1C33ABDB00589E65 /* IngredientesInterfaceController.swift */; };
@@ -70,7 +69,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		81386FEB1C3E56260070B7A5 /* ResultadoDeLaOrden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadoDeLaOrden.swift; sourceTree = "<group>"; };
 		81386FED1C3E57430070B7A5 /* TuOrdenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TuOrdenInterfaceController.swift; sourceTree = "<group>"; };
 		813B859A1C327EE400589E65 /* QuesoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoInterfaceController.swift; sourceTree = "<group>"; };
 		813B859C1C33ABDB00589E65 /* IngredientesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesInterfaceController.swift; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 				813B859A1C327EE400589E65 /* QuesoInterfaceController.swift */,
 				813B859C1C33ABDB00589E65 /* IngredientesInterfaceController.swift */,
 				81386FED1C3E57430070B7A5 /* TuOrdenInterfaceController.swift */,
-				81386FEB1C3E56260070B7A5 /* ResultadoDeLaOrden.swift */,
 				81734DB31C15259800C049CC /* ExtensionDelegate.swift */,
 				81734DB51C15259800C049CC /* NotificationController.swift */,
 				81734DB71C15259800C049CC /* Assets.xcassets */,
@@ -329,7 +326,6 @@
 				813B859D1C33ABDB00589E65 /* IngredientesInterfaceController.swift in Sources */,
 				813B859B1C327EE400589E65 /* QuesoInterfaceController.swift in Sources */,
 				81386FEE1C3E57430070B7A5 /* TuOrdenInterfaceController.swift in Sources */,
-				81386FEC1C3E56260070B7A5 /* ResultadoDeLaOrden.swift in Sources */,
 				81734DB61C15259800C049CC /* NotificationController.swift in Sources */,
 				81734DCA1C1557B000C049CC /* TipoInterfaceController.swift in Sources */,
 				81734DB41C15259800C049CC /* ExtensionDelegate.swift in Sources */,

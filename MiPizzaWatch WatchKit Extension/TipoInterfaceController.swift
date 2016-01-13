@@ -9,10 +9,19 @@
 import WatchKit
 import Foundation
 
+//**************** Variable global
 
 var MasaSeleccionado:String!
 
+//****************
+
+
 class TipoInterfaceController: WKInterfaceController {
+    
+    
+    
+    
+//**************** Outlets
     
     @IBOutlet var itemLabel: WKInterfaceLabel!
     
@@ -21,7 +30,11 @@ class TipoInterfaceController: WKInterfaceController {
     @IBOutlet var siguienteButton: WKInterfaceButton!
     
     
-//******* Variables
+    
+    
+    
+//******************** Variable (lista de String para el Picker)
+    
     var listItems: [(String, String)] = [
     
         ("tipo1","Delgada"),
@@ -31,12 +44,13 @@ class TipoInterfaceController: WKInterfaceController {
 
     
     
-//******* botton
+//******************** al precionar el Picker List(Button)
+    
     @IBAction func pickerChange(value: Int) {
         
         itemLabel.setText(listItems[value].1)
-        siguienteButton.setEnabled(true)
         
+        siguienteButton.setEnabled(true)
         
         MasaSeleccionado = "\(self.listItems[value].1)"
 
@@ -49,6 +63,7 @@ class TipoInterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+//********************Seleccion del caption y el title de la lista        
         let pickerItems: [WKPickerItem] = listItems.map{
             let pickerItem = WKPickerItem()
             pickerItem.caption = $0.0
@@ -61,10 +76,11 @@ class TipoInterfaceController: WKInterfaceController {
         
         siguienteButton.setEnabled(false)
         
-        
-        // Configure interface objects here.
     }
 
+    
+    
+/*
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -74,5 +90,5 @@ class TipoInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+*/
 }

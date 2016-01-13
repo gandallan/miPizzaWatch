@@ -160,15 +160,13 @@
                                 <segue destination="7Qz-fH-ZYI" kind="push" id="oxH-Gd-bIT"/>
                             </connections>
                         </button>
-                        <label width="136" height="62.5" alignment="left" text="Label" textAlignment="center" numberOfLines="6" id="LYM-dr-kUa"/>
                     </items>
                     <connections>
                         <outlet property="siguienteButton" destination="ahM-p3-bRB" id="luR-fo-kIf"/>
-                        <outlet property="tuListaDeIngredientes" destination="LYM-dr-kUa" id="7XH-GW-tWF"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="816" y="499.5"/>
+            <point key="canvasLocation" x="862" y="478.25"/>
         </scene>
         <!--Tu orden-->
         <scene sceneID="cb2-Jt-4mM">
@@ -203,7 +201,7 @@
                         <label width="136" height="21.5" alignment="left" text="Ingredientes:" textAlignment="center" numberOfLines="2" id="BCT-e3-L1Q">
                             <fontDescription key="font" type="system" pointSize="15"/>
                         </label>
-                        <label width="136" height="110.5" alignment="left" text="label" textAlignment="center" numberOfLines="4" id="iu5-YF-0ok">
+                        <label width="136" height="54.5" alignment="left" text="label" textAlignment="center" numberOfLines="0" id="iu5-YF-0ok">
                             <color key="textColor" red="1" green="0.76734059480000005" blue="0.24792966520000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="boldSystem" pointSize="18"/>
                         </label>
@@ -222,7 +220,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1037" y="423.75"/>
+            <point key="canvasLocation" x="1113" y="407.75"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

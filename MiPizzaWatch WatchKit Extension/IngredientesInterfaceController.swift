@@ -10,7 +10,6 @@ import WatchKit
 import Foundation
 
 
-
 //*******Variable Globla
 
 var ingredientesSeleccionados:String!
@@ -19,111 +18,83 @@ var ingredientesSeleccionados:String!
 
 class IngredientesInterfaceController: WKInterfaceController {
 
+    
+    
+    
+//**************** Outlets
+    
     @IBOutlet var siguienteButton: WKInterfaceButton!
-    @IBOutlet var tuListaDeIngredientes: WKInterfaceLabel!
+
     
-    
-    
-    
+
     
 //*********Variables
     
-
     var nombreIngredientes:[String?] = ["Jamon","Pepperoni","Pavo","Salchicha","Aceitunas","Cebolla","Pimiento","Piña","Anchoas"]
     
     var ingredientesBool:[Bool] = [false,false,false,false,false,false,false,false,false]
     
     var numeroDeIngredientes:[Int] = []
-/*
-    var jamon:Bool = false
-    var pepper:Bool = false
-    var pavo:Bool = false
-    var salchi:Bool = false
-    var aceit:Bool = false
-    var ceboll:Bool = false
-    var pimient:Bool = false
-    var pina:Bool = false
-    var anchoas:Bool = false
-*/
+
+    
+    
     
 //**************Switch ingredientes
     
     
     @IBAction func jamonButton(value: Bool) {
         
-        //jamon = true
         anadirIngrediente(0)
 
     }
     
     @IBAction func pepperoniButton(value: Bool) {
-        
-        //pepper = true
+
         anadirIngrediente(1)
         
     }
 
     @IBAction func pavoButton(value: Bool) {
-        
-        //pavo = true
+
         anadirIngrediente(2)
         
     }
     
     @IBAction func salchichaButton(value: Bool) {
-        
-        //salchi = true
+
         anadirIngrediente(3)
     }
     
     @IBAction func aceitunaButton(value: Bool) {
-        
-        //aceit = true
+
         anadirIngrediente(4)
         
     }
     
     @IBAction func cebollaButton(value: Bool) {
-        
-        //ceboll = true
+
         anadirIngrediente(5)
     }
     
     @IBAction func pimientoButton(value: Bool) {
-        
-        //pimient = true
+
         anadirIngrediente(6)
         
     }
     
     @IBAction func pinaButton(value: Bool) {
-        
-        //pina = true
+
         anadirIngrediente(7)
         
     }
     
     @IBAction func anchoasButton(value: Bool) {
-        
-        //anchoas = true
+
         anadirIngrediente(8)
-        
-        
+
     }
     
-/*
-    @IBAction func SiguienteButtonAction() {
-        
-    let contexto = ResultadoDeLaOrden(Tamano: tamanoSeleccionado, Masa: tipoSeleccionado, Queso: quesoSeleccionado, Ingredientes: ingredientesSeleccionados)
-        
-    print(contexto)
-    pushControllerWithName("tuOrden", context: contexto)
-        
-        
-    }
-*/
-    
-    
+
     
     
 //*************Funcion añadir ingrediente
@@ -145,9 +116,10 @@ class IngredientesInterfaceController: WKInterfaceController {
                 showAlert()
                 
                 siguienteButton.setEnabled(false)
-                
+    
                 
                 return
+    
             }
             
             numeroDeIngredientes.append(pos)
@@ -159,7 +131,6 @@ class IngredientesInterfaceController: WKInterfaceController {
                 print(index)
                 
                 numeroDeIngredientes.removeLast()
-                
                 
             }
         }
@@ -174,24 +145,20 @@ class IngredientesInterfaceController: WKInterfaceController {
             
             ingredientesSeleccionados = "\(nombres)"
             
-            //print(ingredientesSeleccionados)
-            
-            tuListaDeIngredientes.setText(nombres)
-            
-            
-            }
+        }
       
-        
     }
     
 
 
     
-    
-//**********Alerta
+//**********Alerta de solo 5 ingredientes
     func showAlert(){
     
         let OK = WKAlertAction(title: "OK", style: WKAlertActionStyle.Default) { () -> Void in
+            
+            //si queremos que al presionar Ok suceda algo, va aquí.
+            
         }
         
     
@@ -200,7 +167,8 @@ class IngredientesInterfaceController: WKInterfaceController {
 
     
     
-//*************
+
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -208,6 +176,11 @@ class IngredientesInterfaceController: WKInterfaceController {
 
     }
 
+    
+    
+    
+    
+/*
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -217,7 +190,7 @@ class IngredientesInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-    
+*/
   
 
 }

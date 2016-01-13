@@ -12,11 +12,18 @@ import Foundation
 
 class TuOrdenInterfaceController: WKInterfaceController {
  
+    
+    
+    
 //************Outlets
+    
     @IBOutlet var TamanoResultado: WKInterfaceLabel!
     @IBOutlet var MasaResultado: WKInterfaceLabel!
     @IBOutlet var QuesoResultado: WKInterfaceLabel!
     @IBOutlet var IngredienteResultado: WKInterfaceLabel!
+
+    
+    
     
 //***********Mandar a cocinar
     
@@ -29,22 +36,20 @@ class TuOrdenInterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+//***********Asignando las variables globales a los label de resultado
         
         TamanoResultado.setText(tamanoSeleccionado)
         MasaResultado.setText(MasaSeleccionado)
         QuesoResultado.setText(quesoSeleccionado)
         IngredienteResultado.setText(ingredientesSeleccionados)
         
-        
-        // Configure interface objects here.
-        
-        //let c = context! as! ResultadoDeLaOrden
-        //TamanoResultado.setText(String(c.tamano))
-        
     }
     
     
+    
+    
 //**********Alerta
+    
     func showAlert(){
         
         let Ok = WKAlertAction(title: "OK", style: WKAlertActionStyle.Default) { () -> Void in
@@ -65,7 +70,7 @@ class TuOrdenInterfaceController: WKInterfaceController {
 //***********Pedido confirmado
     func alertMandarAlInicio(){
         
-        let Ok = WKAlertAction(title: "OK", style: WKAlertActionStyle.Default) { () -> Void in
+        let armarOtraPizza = WKAlertAction(title: "Armar otra pizza", style: WKAlertActionStyle.Default) { () -> Void in
             
             
             self.pushControllerWithName("Tamaño", context: nil)
@@ -73,7 +78,7 @@ class TuOrdenInterfaceController: WKInterfaceController {
             
         }
         
-        presentAlertControllerWithTitle("Confirmado", message: "Tu pedido se ha enviado con éxito", preferredStyle: WKAlertControllerStyle.Alert, actions: [Ok])
+        presentAlertControllerWithTitle("Confirmado", message: "Tu pedido se ha enviado con éxito", preferredStyle: WKAlertControllerStyle.Alert, actions: [armarOtraPizza])
     }
 
     
@@ -83,7 +88,7 @@ class TuOrdenInterfaceController: WKInterfaceController {
     
     
     
-//**********
+/*
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -97,5 +102,5 @@ class TuOrdenInterfaceController: WKInterfaceController {
         
         
     }
-
+*/
 }

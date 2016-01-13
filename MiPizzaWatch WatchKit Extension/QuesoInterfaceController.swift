@@ -9,10 +9,18 @@
 import WatchKit
 import Foundation
 
+//**************** Variable global
+
 var quesoSeleccionado:String!
+
+//****************
 
 class QuesoInterfaceController: WKInterfaceController {
     
+    
+    
+    
+//**************** Outlets
     
     @IBOutlet var quesoPicker: WKInterfacePicker!
     
@@ -20,6 +28,10 @@ class QuesoInterfaceController: WKInterfaceController {
     
     @IBOutlet var siguienteButton: WKInterfaceButton!
     
+    
+    
+
+//******************** Variable (lista de String para el Picker)
     
     let listItems:[(String, String)] = [
         
@@ -30,8 +42,28 @@ class QuesoInterfaceController: WKInterfaceController {
     
     ]
 
+    
+
+    
+//******************** al precionar el Picker List(Button)
+    
+    @IBAction func pickerAction(value: Int) {
+        
+        itemLabel.setText(listItems[value].1)
+        
+        siguienteButton.setEnabled(true)
+        
+        quesoSeleccionado = "\(self.listItems[value].1)"
+
+        
+    }
+    
+    
+    
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+//********************Seleccion del caption y el title de la lista.
         
         let pickerItems: [WKPickerItem] = listItems.map{
             
@@ -43,26 +75,16 @@ class QuesoInterfaceController: WKInterfaceController {
         }
         
         quesoPicker.setItems(pickerItems)
+        
         siguienteButton.setEnabled(false)
         
-        // Configure interface objects here.
-    }
-    
-    
-    @IBAction func pickerAction(value: Int) {
-        
-        itemLabel.setText(listItems[value].1)
-        siguienteButton.setEnabled(true)
-        
-        quesoSeleccionado = "\(self.listItems[value].1)"
-        //print(quesoSeleccionado)
         
     }
    
 
     
     
-
+/*
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
@@ -72,5 +94,5 @@ class QuesoInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+*/
 }
