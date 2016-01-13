@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 
+var quesoSeleccionado:String!
 
 class QuesoInterfaceController: WKInterfaceController {
     
@@ -52,6 +53,10 @@ class QuesoInterfaceController: WKInterfaceController {
         
         itemLabel.setText(listItems[value].1)
         siguienteButton.setEnabled(true)
+        
+        quesoSeleccionado = "\(self.listItems[value].1)"
+        //print(quesoSeleccionado)
+        
     }
    
 

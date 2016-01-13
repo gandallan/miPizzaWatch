@@ -10,6 +10,8 @@ import WatchKit
 import Foundation
 
 
+ var tamanoSeleccionado:String!
+
 class tamanoInterfaceController: WKInterfaceController {
 
     @IBOutlet var tamanosPicker: WKInterfacePicker!
@@ -32,17 +34,24 @@ class tamanoInterfaceController: WKInterfaceController {
     
     ]
     
+   
+    
     @IBAction func pickerChanged(value: Int) {
+        
         
         itemLabel.setText(listItems[value].1)
 
         siguienteButton.setEnabled(true)
         
+        tamanoSeleccionado = "\(self.listItems[value].1)"
+       
         
         //var c = context as! ResultadoDeLaOrden
         
         
     }
+    
+
     
     
     

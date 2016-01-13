@@ -23,6 +23,7 @@
                         <button width="136" height="36.5" alignment="left" title="Siguiente" id="l8r-6Y-7ag">
                             <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
+                                <action selector="siguienteButtonAction" destination="AgC-eL-Hgc" id="5TX-Y5-yUr"/>
                                 <segue destination="d9x-Zd-2XS" kind="push" id="YWi-WK-Dnm"/>
                             </connections>
                         </button>
@@ -155,21 +156,24 @@
                         <button width="1" alignment="left" title="Siguiente" id="ahM-p3-bRB">
                             <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
+                                <action selector="SiguienteButtonAction" destination="SOa-6W-OxO" id="7EZ-g4-YJw"/>
                                 <segue destination="7Qz-fH-ZYI" kind="push" id="oxH-Gd-bIT"/>
                             </connections>
                         </button>
+                        <label width="136" height="62.5" alignment="left" text="Label" textAlignment="center" numberOfLines="6" id="LYM-dr-kUa"/>
                     </items>
                     <connections>
                         <outlet property="siguienteButton" destination="ahM-p3-bRB" id="luR-fo-kIf"/>
+                        <outlet property="tuListaDeIngredientes" destination="LYM-dr-kUa" id="7XH-GW-tWF"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="816" y="478.25"/>
+            <point key="canvasLocation" x="816" y="499.5"/>
         </scene>
         <!--Tu orden-->
         <scene sceneID="cb2-Jt-4mM">
             <objects>
-                <controller title="Tu orden" id="7Qz-fH-ZYI" customClass="TuOrdenInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
+                <controller identifier="tuOrden" title="Tu orden" id="7Qz-fH-ZYI" customClass="TuOrdenInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
                     <items>
                         <label width="136" height="28.5" alignment="left" text="Tu orden" textAlignment="center" numberOfLines="2" id="Tcp-qu-cGh">
                             <fontDescription key="font" type="system" pointSize="15"/>
@@ -199,17 +203,26 @@
                         <label width="136" height="21.5" alignment="left" text="Ingredientes:" textAlignment="center" numberOfLines="2" id="BCT-e3-L1Q">
                             <fontDescription key="font" type="system" pointSize="15"/>
                         </label>
-                        <label width="136" height="21.5" alignment="left" text="label" textAlignment="center" numberOfLines="2" id="iu5-YF-0ok">
+                        <label width="136" height="110.5" alignment="left" text="label" textAlignment="center" numberOfLines="4" id="iu5-YF-0ok">
                             <color key="textColor" red="1" green="0.76734059480000005" blue="0.24792966520000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="boldSystem" pointSize="18"/>
                         </label>
+                        <button width="1" alignment="left" title="Cocinar" id="nTp-QO-qsH">
+                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="mandarACocinar" destination="7Qz-fH-ZYI" id="1ke-g0-53t"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="IngredienteResultado" destination="iu5-YF-0ok" id="ZyJ-7m-zwB"/>
+                        <outlet property="MasaResultado" destination="9Sj-Ta-Bzo" id="3xv-2O-LnR"/>
+                        <outlet property="QuesoResultado" destination="TA5-ke-VAl" id="4HO-y4-Ud2"/>
                         <outlet property="TamanoResultado" destination="Ahr-Rc-bH8" id="k2N-ln-rrV"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1055" y="370.5"/>
+            <point key="canvasLocation" x="1037" y="423.75"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

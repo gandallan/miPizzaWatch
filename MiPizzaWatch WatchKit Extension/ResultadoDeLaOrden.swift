@@ -12,14 +12,15 @@ class ResultadoDeLaOrden: NSObject {
 
     var tamano:String = ""
     var masa:String = ""
-    var Queso:String = ""
-    var Ingredientes:String = ""
+    var queso:String = ""
+    var ingredientes:String = ""
     
-    init(Tamano:String) {
+    init(Tamano:String, Masa:String, Queso: String, Ingredientes: String ) {
+        
         tamano = Tamano
-        
-        
-        
+        masa = Masa
+        queso = Queso
+        ingredientes = Ingredientes
         
     }
     

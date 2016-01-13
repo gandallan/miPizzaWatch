@@ -10,9 +10,20 @@ import WatchKit
 import Foundation
 
 
+
+//*******Variable Globla
+
+var ingredientesSeleccionados:String!
+
+//**********
+
 class IngredientesInterfaceController: WKInterfaceController {
 
     @IBOutlet var siguienteButton: WKInterfaceButton!
+    @IBOutlet var tuListaDeIngredientes: WKInterfaceLabel!
+    
+    
+    
     
     
 //*********Variables
@@ -20,7 +31,7 @@ class IngredientesInterfaceController: WKInterfaceController {
 
     var nombreIngredientes:[String?] = ["Jamon","Pepperoni","Pavo","Salchicha","Aceitunas","Cebolla","Pimiento","Piña","Anchoas"]
     
-    var ingredientesBool:[Bool] = [false,false,false,false,false,false]
+    var ingredientesBool:[Bool] = [false,false,false,false,false,false,false,false,false]
     
     var numeroDeIngredientes:[Int] = []
 /*
@@ -97,9 +108,20 @@ class IngredientesInterfaceController: WKInterfaceController {
         //anchoas = true
         anadirIngrediente(8)
         
+        
     }
     
-
+/*
+    @IBAction func SiguienteButtonAction() {
+        
+    let contexto = ResultadoDeLaOrden(Tamano: tamanoSeleccionado, Masa: tipoSeleccionado, Queso: quesoSeleccionado, Ingredientes: ingredientesSeleccionados)
+        
+    print(contexto)
+    pushControllerWithName("tuOrden", context: contexto)
+        
+        
+    }
+*/
     
     
     
@@ -114,17 +136,18 @@ class IngredientesInterfaceController: WKInterfaceController {
         
         if(ingredientesBool[pos]) {
             
+            //print(ingredientesBool[pos])
             
             if(numeroDeIngredientes.count > 4){
+                
+                print(numeroDeIngredientes.count)
                 
                 showAlert()
                 
                 siguienteButton.setEnabled(false)
                 
-                print(numeroDeIngredientes)
                 
                 return
-                
             }
             
             numeroDeIngredientes.append(pos)
@@ -133,7 +156,10 @@ class IngredientesInterfaceController: WKInterfaceController {
             
             if let index = numeroDeIngredientes.indexOf(pos) {
                 
-                numeroDeIngredientes.removeAtIndex(index)
+                print(index)
+                
+                numeroDeIngredientes.removeLast()
+                
                 
             }
         }
@@ -141,30 +167,40 @@ class IngredientesInterfaceController: WKInterfaceController {
 
         for ii in numeroDeIngredientes {
             
-            let nombres = "\( nombreIngredientes[ii]!),"
+            
+            let nombres:String! = "\(nombreIngredientes[ii]!)"
             
             print(nombres)
-
             
-        }
+            ingredientesSeleccionados = "\(nombres)"
+            
+            //print(ingredientesSeleccionados)
+            
+            tuListaDeIngredientes.setText(nombres)
+            
+            
+            }
+      
         
-        //var fieldIngrediente = String(nombres!.characters.dropLast())
     }
     
+
+
     
     
 //**********Alerta
     func showAlert(){
     
         let OK = WKAlertAction(title: "OK", style: WKAlertActionStyle.Default) { () -> Void in
-            print("OK")
         }
         
     
-        presentAlertControllerWithTitle("Alert", message: "solo 5 ingredientes", preferredStyle: WKAlertControllerStyle.Alert, actions: [OK])
+        presentAlertControllerWithTitle("Recuerda", message: "solo 5 ingredientes máx", preferredStyle: WKAlertControllerStyle.Alert, actions: [OK])
     }
 
-
+    
+    
+//*************
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         

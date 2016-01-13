@@ -10,6 +10,8 @@ import WatchKit
 import Foundation
 
 
+var MasaSeleccionado:String!
+
 class TipoInterfaceController: WKInterfaceController {
     
     @IBOutlet var itemLabel: WKInterfaceLabel!
@@ -26,6 +28,7 @@ class TipoInterfaceController: WKInterfaceController {
         ("tipo2","Crujiente"),
         ("tipo3", "Gruesa")
     ]
+
     
     
 //******* botton
@@ -34,6 +37,9 @@ class TipoInterfaceController: WKInterfaceController {
         itemLabel.setText(listItems[value].1)
         siguienteButton.setEnabled(true)
         
+        
+        MasaSeleccionado = "\(self.listItems[value].1)"
+
         
     }
     
