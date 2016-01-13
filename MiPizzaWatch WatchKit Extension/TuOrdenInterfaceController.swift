@@ -68,9 +68,12 @@ class TuOrdenInterfaceController: WKInterfaceController {
         let Ok = WKAlertAction(title: "OK", style: WKAlertActionStyle.Default) { () -> Void in
             
             
+            self.pushControllerWithName("Tamaño", context: nil)
+            
+            
         }
         
-        presentAlertControllerWithTitle("Confirmado", message: "Tu pedido se ha mandado con éxito", preferredStyle: WKAlertControllerStyle.Alert, actions: [Ok])
+        presentAlertControllerWithTitle("Confirmado", message: "Tu pedido se ha enviado con éxito", preferredStyle: WKAlertControllerStyle.Alert, actions: [Ok])
     }
 
     
@@ -85,7 +88,7 @@ class TuOrdenInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        
+
     }
 
     override func didDeactivate() {

@@ -8,7 +8,7 @@
         <!--Tamaño-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Tamaño" id="AgC-eL-Hgc" customClass="tamanoInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
+                <controller identifier="Tamaño" title="Tamaño" id="AgC-eL-Hgc" customClass="tamanoInterfaceController" customModule="MiPizzaWatch_WatchKit_Extension">
                     <items>
                         <label width="136" alignment="left" text="Tamaño de tu pizza" minimumScaleFactor="0.90000000000000002" id="BMn-Oj-HQF"/>
                         <picker height="59" alignment="center" focusStyle="sequence" id="mha-Gm-1KT">
